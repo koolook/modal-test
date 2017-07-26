@@ -9,13 +9,17 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 export class TestComponent implements OnInit {
 
   showInModal = false;
+  prefix = 'Inline'
 
-  radioModel = 'Middle';
+  radioModel;
 
   constructor(@Optional() private ref: BsModalRef) {
     if (this.ref) {
       this.showInModal = true;
+      this.prefix = 'Modal';
     }
+
+    this.radioModel = this.prefix + 'Left';
   }
 
   ngOnInit() {

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { Ng2BootstrapModule } from 'ngx-bootstrap';
 import { ModalModule, BsModalService } from 'ngx-bootstrap/modal'; 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';  
 
@@ -23,9 +24,10 @@ import { TestComponent } from './test/test.component';
     HttpModule,
     ButtonsModule.forRoot(),
     ModalModule.forRoot()
+    // Ng2BootstrapModule.forRoot()
   ],
   providers: [
-    BsModalService
+    // BsModalService
   ],
   bootstrap: [AppComponent]
 })

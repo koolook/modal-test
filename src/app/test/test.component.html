@@ -1,9 +1,8 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="btn-group">
-      <label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="Left">Left</label>
-      <label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="Middle">Middle</label>
-      <label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="Right">Right</label>
+      <label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="{{prefix}}Left">Left</label>
+      <label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="{{prefix}}Right">Right</label>
     </div>
     <div class="panel-footer">
       {{radioModel}}
