@@ -1,4 +1,4 @@
-import { Component, OnInit, Optional } from '@angular/core';
+import { Component, OnInit, Optional, EventEmitter, Output } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -7,6 +7,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
+
+  @Output() hide = new EventEmitter();
 
   showInModal = false;
   prefix = 'Inline'
@@ -29,5 +31,6 @@ export class TestComponent implements OnInit {
     if (this.showInModal) {
       this.ref.hide();
     }
+    this.hide.emit();
   }
 }

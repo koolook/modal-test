@@ -2,7 +2,18 @@
   {{title}}
 </h1>
 
-<button type="button" class="btn btn-primary" (click)="showModal()">Show modal</button>
+<button type="button" class="btn btn-primary" (click)="showModal()">Service modal</button>
+<button type="button" class="btn btn-primary" (click)="inlineModal.show()">Inline modal</button>
 
-<p>Raw component</p>
-<app-test></app-test>
+<!-- <p>Raw component</p>
+<app-test></app-test> -->
+
+<div bsModal #inlineModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <app-test (hide)="inlineModal.hide()"></app-test>
+    </div>
+  </div>
+</div>
+
+<div id="modalHost"></div>
