@@ -1,0 +1,8 @@
+<div class="btn-group">
+  <label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="Left">Left</label>
+  <label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="Middle">Middle</label>
+  <label class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="Right">Right</label>
+</div>
+<div *ngIf="showInModal">
+  <button type="button" class="btn btn-primary" (click)="close()">Close</button>
+</div>
