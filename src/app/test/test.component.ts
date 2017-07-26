@@ -13,7 +13,7 @@ export class TestComponent implements OnInit {
   radioModel = 'Middle';
 
   constructor(@Optional() private ref: BsModalRef) {
-    if (ref) {
+    if (this.ref) {
       this.showInModal = true;
     }
   }
